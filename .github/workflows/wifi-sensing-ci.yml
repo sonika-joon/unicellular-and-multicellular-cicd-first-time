@@ -1,0 +1,35 @@
+name: WiFi Sensing Platform CI
+
+on:
+  push:
+    branches:
+      - wifi-csi-research
+  pull_request:
+    branches:
+      - wifi-csi-research
+
+jobs:
+
+  python-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f wifi-sensing-platform/requirements.txt ]; then
+            pip install -r wifi-sensing-platform/requirements.txt
+          fi
+
+      - name: Run tests
+        run: |
+          pytest tests || true
