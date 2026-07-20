@@ -1,0 +1,9 @@
+[submodule "upstream/esp-csi"]
+	path = upstream/esp-csi
+	url = https://github.com/espressif/esp-csi.git
+[submodule "upstream/ESP32-CSI-Tool"]
+	path = upstream/ESP32-CSI-Tool
+	url = https://github.com/StevenMHernandez/ESP32-CSI-Tool.git
+[submodule "upstream/ESP32-WiFi-Sensing"]
+	path = upstream/ESP32-WiFi-Sensing
+	url = https://github.com/thu4n/ESP32-WiFi-Sensing.git
