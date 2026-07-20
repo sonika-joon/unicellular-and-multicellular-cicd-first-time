@@ -1,0 +1,11 @@
+# Generated CSI data
+*.csv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# ML artifacts
+*.onnx
+*.pt
+*.pth
